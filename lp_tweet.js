@@ -23,7 +23,9 @@ if (img.text) {
 			// HANDLE EMOTES HERE
 		
 			console.log(m)
-			text = text.replace(m, emotes[name])
+			if (emotes[name].text) {
+				text = text.replace(m, emotes[name].text)
+			}
 		}
 	}
 	console.log(text)
