@@ -1,7 +1,22 @@
 {
-	"gonk": "https://lparchive.org/Half-Life-2/Update%2044/emot-gonk.gif",
-	"siren": "https://lparchive.org/Half-Life-2/Update%2044/emot-siren.gif",
-	"argh": "https://lparchive.org/Half-Life-2/Update%2036/emot-argh.gif",
-	"iceburn": "https://lparchive.org/Half-Life-2/Update%2015/emot-iceburn.gif",
-	"frown": "https://lparchive.org/Half-Life-2/Update%2013/frown.gif"
+	"gonk": {
+		"icon": "https://lparchive.org/Half-Life-2/Update%2044/emot-gonk.gif",
+		"text": ""
+	}
+	"siren": {
+		"icon": "https://lparchive.org/Half-Life-2/Update%2044/emot-siren.gif",
+		"text": "🚨"
+	},
+	"argh": {
+		"icon": "https://lparchive.org/Half-Life-2/Update%2036/emot-argh.gif",
+		"text": "😡"
+	}
+	"iceburn": {
+		"icon": "https://lparchive.org/Half-Life-2/Update%2015/emot-iceburn.gif",
+		"text": ""
+	}
+	"frown": {
+		"icon": "https://lparchive.org/Half-Life-2/Update%2013/frown.gif",
+		"text": "🙁"
+	}
 }
