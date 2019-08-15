@@ -1,8 +1,8 @@
-const images = require('./hl.json')
+const images = require('./lp.json')
 
-const emotes = require('./hl_emotes.json')
+const emotes = require('./lp_emotes.json')
 
-let index = require('./hl_state.json')
+let index = require('./lp_state.json')
 
 // END OF CONFIGURATION //
 
