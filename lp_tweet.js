@@ -1,10 +1,17 @@
-const images = require('./lp.json')
 
-const emotes = require('./lp_emotes.json')
 
-let index = require('./lp_state.json')
+const FILENAMES = {
+	images: './lp.json',
+	emotes: './lp_emotes.json',
+	index: './lp_state.json'
+}
 
 // END OF CONFIGURATION //
+
+const images = require(FILENAMES.images)
+const emotes = require(FILENAMES.emotes)
+let index = require(FILENAMES.index)
+
 
 const fs = require('fs')
 
@@ -17,7 +24,7 @@ if (img.text) {
 	let text = img.text.trim()
 	let matches = text.match(/:\w+:/gi)
 
-	for (let m of matches) {
+	if (matches) for (let m of matches) {
 		let name = m.slice(1, -1)
 		if (name in emotes) {
 			// HANDLE EMOTES HERE
@@ -55,11 +62,11 @@ if ( !index.pause ) {
 		index.img = 1;
 	}
 	
-	fs.writeFileSync('./hl_tweet_num.json', JSON.stringify(index))
+	fs.writeFileSync(FILENAMES.index, JSON.stringify(index))
 }
 
 /*
-hl_state.json
+lp_state.json
 {
 	page: page number, starts at 1
 	img: image number, starts at 1
@@ -67,7 +74,7 @@ hl_state.json
 }
 */
 /* 
-hl.json contains an array of arrays, one for each page
+lp.json contains an array of arrays, one for each page
 each array contains every image object on that page
 image format:
 {
