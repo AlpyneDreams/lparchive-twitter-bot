@@ -1,6 +1,7 @@
 const config = require('./config')
 
 const fs = require('fs')
+const pathlib = require('path')
 const { JSDOM } = require('jsdom')
 var request = require("request-promise-native")
 var ProgressBar = require('progress')
@@ -37,11 +38,19 @@ async function parsePage(n = 1) {
     let out = []
     let lastimg = document.getElementById("content").querySelector("h3")
     for (let img of document.getElementById("content").getElementsByTagName("img")) {
+        if (img.src.endsWith(config.emotes.suffix)) continue
         let txt = ""
         if (lastimg) {
             let node = lastimg.nextSibling
-            while (node.tagName != "IMG") {
-                txt += node.textContent.replace(/^[\n\t]+/gi, '')
+            while (node) {
+                if (node.tagName == "IMG") {
+                    if (node.src.endsWith(config.emotes.suffix))
+                        txt += `:${pathlib.basename(node.src, config.emotes.suffix).replace(config.emotes.prefix, '')}:`
+                    else
+                        break
+                } else {
+                    txt += node.textContent.replace(/^[\n\t]+/gi, '')
+                }
                 node = node.nextSibling
             }
         }

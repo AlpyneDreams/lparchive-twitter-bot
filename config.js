@@ -10,6 +10,10 @@ let config = {
     },
     urls: {
         images: 'https://lparchive.org/Half-Life-2/Update %n/'
+    },
+    emotes: {
+        prefix: 'emot-',
+        suffix: '.gif'
     }
 }
 
