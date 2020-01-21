@@ -1,16 +1,8 @@
+const config = require('./config')
 
-
-const FILENAMES = {
-	images: './lp.json',
-	emotes: './lp_emotes.json',
-	index: './lp_state.json'
-}
-
-// END OF CONFIGURATION //
-
-const images = require(FILENAMES.images)
-const emotes = require(FILENAMES.emotes)
-let index = require(FILENAMES.index)
+const images = require(config.filenames.images)
+const emotes = require(config.filenames.emotes)
+let index = require(config.filenames.index)
 
 
 const fs = require('fs')
@@ -62,7 +54,7 @@ if ( !index.pause ) {
 		index.img = 1;
 	}
 	
-	fs.writeFileSync(FILENAMES.index, JSON.stringify(index))
+	fs.writeFileSync(config.filenames.index, JSON.stringify(index))
 }
 
 /*

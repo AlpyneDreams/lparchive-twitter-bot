@@ -1,14 +1,13 @@
-const BASE_IMAGE_PATH = 'https://lparchive.org/Half-Life-2/Update %n/'
-const BASE_FILE_PATH = 'Update%n/'
+const config = require('./config')
 
 const fs = require('fs')
 var request = require("request")
 var ProgressBar = require('progress')
 
-const data = require('./lp.json')
+const data = require(config.filenames.images)
 
-fs.rmdirSync('images', {recursive: true})
-fs.mkdirSync('images')
+fs.rmdirSync(config.folders.images, {recursive: true})
+fs.mkdirSync(config.folders.images)
 
 // count total images for progress bar
 let totalImages = 0
@@ -18,16 +17,16 @@ let bar = new ProgressBar('Images: [:bar] :current / :total', { total: totalImag
 
 let pageNumber = 1
 for (let page of data) {
-    let pageFolder = 'images/' + BASE_FILE_PATH.replace('%n', pageNumber)
+    let pageFolder = config.getImageFolder(pageNumber)
     fs.mkdirSync(pageFolder)
     for (let bit of page) {
         if (bit.src) {
             if (Array.isArray(bit.src)) {
                 for (let i of bit.src) {
-                    fetchImage(pageFolder + i, BASE_IMAGE_PATH.replace('%n', pageNumber) + i, bar)
+                    fetchImage(pageFolder + i, config.getImagePath(pageNumber) + i, bar)
                 }
             } else {
-                fetchImage(pageFolder + bit.src, BASE_IMAGE_PATH.replace('%n', pageNumber) + bit.src, bar)
+                fetchImage(pageFolder + bit.src, config.getImagePath(pageNumber) + bit.src, bar)
             }
         }
     }
@@ -36,8 +35,9 @@ for (let page of data) {
 
 async function fetchImage(filename, url) {
     let req = request(url)
-    req.pipe(fs.createWriteStream(filename))
-    req.on('response', () => {
+    let stream = fs.createWriteStream(filename)
+    req.pipe(stream)
+    stream.on('close', () => {
         bar.tick()
     })
 }

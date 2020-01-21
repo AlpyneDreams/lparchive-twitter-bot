@@ -1,10 +1,12 @@
+const config = require('./config')
+
 const fs = require('fs')
 const { JSDOM } = require('jsdom')
 var request = require("request-promise-native")
 var ProgressBar = require('progress')
 
 batchPages(45).then(out => {
-    fs.writeFileSync('lp.json', out)
+    fs.writeFileSync(config.filenames.images, out)
 })
 
 async function batchPages(count) {
@@ -28,7 +30,7 @@ function getJSON(data, isLast = false) {
 }
 
 async function parsePage(n = 1) {
-    let body = await request(`https://lparchive.org/Half-Life-2/Update ${n}/`)
+    let body = await request(config.getImagePath(n))
     const dom = new JSDOM(body)
     let document = dom.window.document
 
