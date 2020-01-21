@@ -34,7 +34,8 @@ async function parsePage(n = 1) {
     let body = await request(config.getImagePath(n))
     const dom = new JSDOM(body)
     let document = dom.window.document
-
+    // insert dummy image to catch text after final image in page
+    document.getElementById("content").appendChild(document.createElement('IMG'))
     let out = []
     let lastimg = document.getElementById("content").querySelector("h3")
     for (let img of document.getElementById("content").getElementsByTagName("img")) {
@@ -43,18 +44,24 @@ async function parsePage(n = 1) {
         if (lastimg) {
             let node = lastimg.nextSibling
             while (node) {
-                if (node.tagName == "IMG") {
+                if (node.tagName == 'IMG') {
                     if (node.src.endsWith(config.emotes.suffix))
                         txt += `:${pathlib.basename(node.src, config.emotes.suffix).replace(config.emotes.prefix, '')}:`
                     else
                         break
-                } else {
-                    txt += node.textContent.replace(/^[\n\t]+/gi, '')
+                } else if (node.nodeType != dom.window.Node.COMMENT_NODE) {
+                    if (node.tagName == 'BR') {
+                        txt += '\n'
+                    } else {
+                        txt += node.textContent.replace(/^[\n\t]+/gi, '')
+                    }
                 }
                 node = node.nextSibling
             }
         }
-        out.push({ src: img.src, text: txt })
+        txt = txt.replace(/^(\n)+|(\n)+$/g, '')
+        if (txt.trim().length > 0 || img.src.length > 0)
+            out.push({ src: img.src, text: txt })
         lastimg = img
     }
 

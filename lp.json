@@ -2,7 +2,7 @@
 [
 	{
 		"src": "1-hl01s.JPG",
-		"text": "so O.K. i dont have like a fancy picture taking program that most of you use for the lets plays so i used my camera instead right welcome to my halflife2 playthrough. "
+		"text": "so O.K. i dont have like a fancy picture taking program that most of you use for the lets plays so i used my camera instead \n\nright welcome to my halflife2 playthrough. "
 	},
 	{
 		"src": "2-hl02s.JPG",
@@ -3002,7 +3002,7 @@
 	},
 	{
 		"src": "12-S5032845.JPG",
-		"text": "Marine 1: \"So, who is this guy, Freeman?\"Marine 2: \"They say he was at ground zero.\"Marine 1: \"Science team... You think he was responsible? Sabotage, maybe?\"Marine 2: \"Yeah, maybe. All I know for sure is he's been killing my buddies.\"Marine 1: \"Oh yeah, he'll pay. He will definitely pay.\""
+		"text": "Marine 1: \"So, who is this guy, Freeman?\"\nMarine 2: \"They say he was at ground zero.\"\nMarine 1: \"Science team... You think he was responsible? Sabotage, maybe?\"\nMarine 2: \"Yeah, maybe. All I know for sure is he's been killing my buddies.\"\nMarine 1: \"Oh yeah, he'll pay. He will definitely pay.\""
 	},
 	{
 		"src": "13-computerdogku02.JPG",
@@ -3466,7 +3466,7 @@
 	},
 	{
 		"src": "31-S5033053.JPG",
-		"text": "Marine 2: \"Where are we takin this Freeman guy?\"Marine 1: \"Topside for questioning.\"Marine 2: \"What the hell for? We got 'im. Let's kill him now.\"Marine 1: \"Uh... and if they find the body?\"Marine 2: \"Body? What body?\""
+		"text": "Marine 2: \"Where are we takin this Freeman guy?\"\nMarine 1: \"Topside for questioning.\"\nMarine 2: \"What the hell for? We got 'im. Let's kill him now.\"\nMarine 1: \"Uh... and if they find the body?\"\nMarine 2: \"Body? What body?\""
 	},
 	{
 		"src": "32-S5033054.JPG",
@@ -4918,7 +4918,7 @@
 	},
 	{
 		"src": "17-S5033643.JPG",
-		"text": "im too busy to go to gamefaqs to check the game script but let me summarize what's said heresoldier 1: hey other soldier whats our gayness levelsoldier 2; its over nine hundreeeedddd!!!1"
+		"text": "im too busy to go to gamefaqs to check the game script but let me summarize what's said here\nsoldier 1: hey other soldier whats our gayness level\nsoldier 2; its over nine hundreeeedddd!!!1"
 	},
 	{
 		"src": "18-S5033644.JPG",
@@ -5969,7 +5969,12 @@
 		"text": "fuck this, ill deal with these bitches later."
 	}
 ],
-[],
+[
+	{
+		"src": "",
+		"text": ":siren:PSEUDO-UPDATE:siren:\n\nhttp://www.dailymotion.com/shitparticles/video/6321685\n\ni decided to make a short video for the LP instead of a regular screenshot update. don't freak out or anything gay like that, this is STILL a screenshot LP and i will be returning to regular updates next video, i just wanted to try this out for a change.\n\np.s. dont make fun of my voice\n\n\n\n  "
+	}
+],
 [
 	{
 		"src": "1-S5034011.JPG",
@@ -6533,11 +6538,11 @@
 	},
 	{
 		"src": "37-S5034258.JPG",
-		"text": "Scientist: \"Gordon Freeman, you've finally found us.\"Guard: \"So this is the guy. We thought you'd never make it.\"Scientist: \"This is the supply depot for our first survey team. Quite a few handsome specimens were collected from the borderworld and brought back this way. Uh... before the survey members started being collected themselves, that is. We suspect there is an immense portal over there, created by the intense concentration of a single powerful being. You will know it when you see it. I hate to say this Gordon, but you must kill it.\"Guard: \"Yeah, you'd better kill it.\""
+		"text": "Scientist: \"Gordon Freeman, you've finally found us.\"\nGuard: \"So this is the guy. We thought you'd never make it.\"\nScientist: \"This is the supply depot for our first survey team. Quite a few handsome specimens were collected from the borderworld and brought back this way. Uh... before the survey members started being collected themselves, that is. We suspect there is an immense portal over there, created by the intense concentration of a single powerful being. You will know it when you see it. I hate to say this Gordon, but you must kill it.\"\nGuard: \"Yeah, you'd better kill it.\""
 	},
 	{
 		"src": "38-S5034259.JPG",
-		"text": "Scientist: \"Of course, you owe us nothing, Mr. Freeman. But you've come this far. You know as much about these creatures as anyone.\"Guard: \"Enough to know that if you don't wipe it out, there won't be much for you to come home to.\"Scientist: \"Yes, so if you're willing, my colleague is waiting for you at the main portal controls. He will open the gates for you, Mr. Freeman. Do hurry.\"Guard: \"Don't forget to gear up, and I'll cover you while you're waiting for that portal to warm up.\" "
+		"text": "Scientist: \"Of course, you owe us nothing, Mr. Freeman. But you've come this far. You know as much about these creatures as anyone.\"\nGuard: \"Enough to know that if you don't wipe it out, there won't be much for you to come home to.\"\nScientist: \"Yes, so if you're willing, my colleague is waiting for you at the main portal controls. He will open the gates for you, Mr. Freeman. Do hurry.\"\nGuard: \"Don't forget to gear up, and I'll cover you while you're waiting for that portal to warm up.\" "
 	},
 	{
 		"src": "39-S5034261.JPG",
@@ -7566,6 +7571,10 @@
 	{
 		"src": "66-S5034553.JPG",
 		"text": "thanks for watching!"
+	},
+	{
+		"src": "",
+		"text": "yo dogs heres an AMV i made for this thread\n\nthe music is nine inch nails's \"hand that feeds\" and the ghostbusters theme. yea i had god mode on in some of the clips, sue me.\n\n\n\n  "
 	}
 ]
 
