@@ -1,0 +1,26 @@
+{
+  "name": "lparchive_twitter_bot",
+  "version": "1.0.0",
+  "description": "lparchive_twitter_bot",
+  "main": "lp_batch.js",
+  "dependencies": {
+    "jsdom": "^16.0.1",
+    "progress": "^2.0.3",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DankParrot/lparchive-twitter-bot.git"
+  },
+  "author": "Alpyne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DankParrot/lparchive-twitter-bot/issues"
+  },
+  "homepage": "https://github.com/DankParrot/lparchive-twitter-bot#readme"
+}
